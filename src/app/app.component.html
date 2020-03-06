@@ -1,0 +1,61 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<a
+  style="position: fixed; bottom: 20px; right: 20px"
+  routerLink="/home"
+  class="btn-floating btn-large waves-effect waves-light blue"
+  ><i class="material-icons">home</i></a
+>
+
+<div class="row" *ngIf="promptEvent">
+  <div class="col s12 ">
+    <div class="card">
+      <div class="card-content">
+        <div *ngIf="promptEvent" class="blue">
+          <strong>Now!</strong> You can download our web app. Click Here
+          <a class="right waves-effect waves-light btn" (click)="installPwa()">
+            Install App
+          </a>
+        </div>
+        <div
+          *ngIf="promptEvent && accepted && showAlert"
+          class="red white-text"
+        >
+          <strong>Great!</strong> Wait for a minute. App will install soon.
+        </div>
+        <div *ngIf="promptEvent && !accepted && showAlert">
+          <strong>Sorry!</strong> Now you have to install manually.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 ">
+    <div class="card">
+      <div class="card-content">
+        <h4 style="margin-top: 0px">Welcome, Guest</h4>
+        <h5 style="margin-top: 0px">{{ title }}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 ">
+    <div class="card">
+      <div class="card-content">
+        <p><b>Name:</b> Anilkumar Patel</p>
+        <p><b>Email:</b> anilpatel.iiitm@gmail.com</p>
+        <p><b>Phone:</b> +91-8669046705</p>
+      </div>
+    </div>
+  </div>
+</div>

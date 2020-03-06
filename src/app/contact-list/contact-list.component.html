@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col s12">
+    <a
+      *ngIf="supported"
+      class="waves-effect waves-light btn"
+      (click)="getContacts()"
+      >Get Contact
+    </a>
+    <div class="card">
+      <div *ngIf="supported" style="padding: 10px; margin: 5px">
+        <label>
+          <input
+            class=""
+            type="checkbox"
+            [checked]="cbMultiple"
+            (change)="chng()"
+          />
+          <span>Checked here if you wanna access multiple contact list from device</span>
+        </label>
+      </div>
+      <div #ulResults class="card-content"></div>
+    </div>
+    <div class="card">
+      *If not working, please click here in this
+      <a href="https://jobsali.website/anil/contact/">link</a>. I have
+      implemented it using vanilla javascript.
+    </div>
+  </div>
+</div>

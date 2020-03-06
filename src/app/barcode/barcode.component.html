@@ -1,0 +1,44 @@
+<!-- <select [(ngModel)]="scanType">
+    <option value="upc-a">UPC-A</option>
+    <option value="code_128">Code 128</option>
+    <option value="code_128">Code 128</option>
+</select> -->
+<div class="row">
+  <div class="col s12">
+    <p>
+      Almost every foods business industries may be using UPC reader. So, I
+      implemented UPC Reader.
+    </p>
+    <p>
+      Scan the barcode UPC-A. If you want to generate follow this
+      <a href="https://barcode.tec-it.com/en/UPCA?data=72527273070">link</a>
+    </p>
+    <ul>
+      <li>
+        Step 1: Generate Code using above link or any UPC-A barcode in any other
+        device
+      </li>
+      <li>Step 2: Using camera, scan that barcode from this device.</li>
+    </ul>
+    <div class="card">
+      <barcode-scanner-livestream
+        type="upc"
+        (valueChanges)="onValueChanges($event)"
+        (started)="(onStarted)"
+      ></barcode-scanner-livestream>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12">
+    <div class="card">
+      <div class="card-content">
+        <p>Reading of the UPC Code:</p>
+        <div [hidden]="!barcodeValue">
+          {{ barcodeValue }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
