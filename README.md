@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
 
+## To install application
+Run `npm install`. This will download all the necessary dependencies require to run the app. 
+
+## For typing of google map
+Run `npm install --save @types/googlemaps`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
